@@ -1,1 +1,1 @@
-# Solved Machines
+# HTB-WriteUps Machines
