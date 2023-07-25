@@ -1,1 +1,4 @@
 # Topology
+#### Topology Hack The box
+Hello Hackers, I'm [0xDigimon](https://www.linkedin.com/in/abdelmawla-elamrosy/)<br><img src="https://github.com/0xDigimon/CyLert-Internship/blob/main/HTB-Machines/Topology/media/01.png?raw=true"><br>
+i started nmap scan and it has http on port 80 <br><img src="https://github.com/0xDigimon/CyLert-Internship/blob/main/HTB-Machines/Topology/media/02.png?raw=true"><br> i discovered website and found subdomain and record it in ```/etc/hosts```<br><img src="https://github.com/0xDigimon/CyLert-Internship/blob/main/HTB-Machines/Topology/media/04.png?raw=true"><br><br><img src="https://github.com/0xDigimon/CyLert-Internship/blob/main/HTB-Machines/Topology/media/05.png?raw=true"><br>also i started fuzzing using dirsearch <br><img src="https://github.com/0xDigimon/CyLert-Internship/blob/main/HTB-Machines/Topology/media/03.png?raw=true"><br>but nothing important 
